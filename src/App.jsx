@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Component } from 'react/cjs/react.development'
 import './App.css'
 import Buscador from './components/Buscador'
-import Result  from './components/result'
+import Result  from './components/Result'
 
 class App extends Component {
 

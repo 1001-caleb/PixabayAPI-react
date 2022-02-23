@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Images from './Images'
 class Result extends Component{
     
     mostrarImagenes = ()=>{
@@ -11,7 +11,12 @@ class Result extends Component{
         return(
             <React.Fragment>
              <div className="col-12 p-5 row">
-
+                {imagenes.map(imagen =>(
+                    <Images
+                        key={imagen.id}
+                        images = {imagen}
+                    />
+                ))}
              </div>
             </React.Fragment>
         )
