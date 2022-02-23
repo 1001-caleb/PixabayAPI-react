@@ -5,8 +5,14 @@ import Buscador from './components/Buscador'
 
 class App extends Component {
 
+  state ={
+    termino: "si"
+  }
+
   datosBusqueda = (termino)=>{
-    console.log(termino);
+    this.setState({
+      termino
+    })
   }
 
   render(){
@@ -15,12 +21,14 @@ class App extends Component {
         <h1 className='text-center'>Pixabay API</h1>
         <div className="jumbotron">
          <p className="lead text-center">Buscador de imagenes</p>
-        </div>
-  
-        <Buscador 
+
+         <Buscador 
           datosBusqueda={this.datosBusqueda}
         />
+        </div>
+        {this.state.termino}
       </div>
+      
     )
   }
   }
