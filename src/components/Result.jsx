@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Images from './Images'
+import Pagination from './Pagination';
 class Result extends Component{
     
     mostrarImagenes = ()=>{
@@ -10,6 +11,10 @@ class Result extends Component{
 
         return(
             <React.Fragment>
+            <Pagination 
+            paginaAnterior = {this.props.paginaAnterior}
+            paginaSiguiente = {this.props.paginaSiguiente}
+            />
              <div className="col-12 p-5 row">
                 {imagenes.map(imagen =>(
                     <Images
@@ -18,6 +23,7 @@ class Result extends Component{
                     />
                 ))}
              </div>
+
             </React.Fragment>
         )
     }
